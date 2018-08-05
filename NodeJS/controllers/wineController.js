@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
         description: req.body.description,
         typeOfWine: req.body.typeOfWine,
         size : req.body.size,
-        price :req.body.price,
+        price :req.body.price
     });
     //insert new record into mongo database using the save object
     myWine.save((err, doc)=> {
@@ -60,7 +60,7 @@ router.put('/:id', (req, res)=> {
             description: req.body.description,
             typeOfWine: req.body.typeOfWine,
             size : req.body.size,
-            price :req.body.price,
+            price :req.body.price
         };
         //pass object with options and call back function with err, doc. 
         //new: true test mongodb whether we want to return all data of wine or just the updated data back to the response
