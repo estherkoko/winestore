@@ -1,0 +1,56 @@
+<p>
+  wine works!
+  name: string;
+  description : string;
+  typeOfWine : string;
+  size : number;
+  price : number;
+</p>
+<div class ="row">
+    <div class="card">
+      <div class="card-content">
+          <div class="row">
+              <form #wineForm="ngForm" (ngSubmit) ="onSubmit(wineForm)" class="col s12">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="wineService.selectedWine._id">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input placeholder="Enter Wine Name" name="name" #name="ngModel" [(ngModel)]="wineService.selectedWine.name" type="text" class="validate" required>
+                    <label>Name:
+                      <label class="red-text"></label>
+                    </label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input name="description" type="text" #name="ngModel" [(ngModel)]="wineService.selectedWine.description" class="validate">
+                    <label>Description :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input name="typeOfWine" #name="ngModel" [(ngModel)]="wineService.selectedWine.typeOfWine" type="text" class="validate">
+                    <label>Wine Type :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input name="size" type="number" #name="ngModel" [(ngModel)]="wineService.selectedWine.size" class="validate">
+                    <label>Size :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input name="price" type="number"  #name="ngModel" [(ngModel)]="wineService.selectedWine.price" class="validate">
+                    <label>Price :</label>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                      <button class="btn btn-custom right" type="button" (click)="resetForm(wineForm)">Reset</button>
+                      <button class="btn btn-custom right" type="submit" [disabled]="!wineForm.valid">Submit</button>
+                    </div>
+                  </div>
+              </form>
+            </div>
+                  
+      </div>
+    </div>
+  </div>
