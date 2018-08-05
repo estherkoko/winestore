@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 import { WineService } from '../shared/wine.service';
 import { NgForm } from '../../../node_modules/@angular/forms';
+//import { toast } from '../../../../../../../node_modules/angular2-materialize';
 
+declare var M: any;
 @Component({
   selector: 'app-wine',
   templateUrl: './wine.component.html',
@@ -42,7 +43,7 @@ export class WineComponent implements OnInit {
  onSubmit(form:NgForm){
   this.wineService.postWine(form.value).subscribe((res)=>{
     this.resetForm(form);
-    _M.toast({html : 'Saved successfully', classes:'rounded'});
+    M.toast({html : 'Saved successfully', classes:'rounded'});
   });
 }
   }
