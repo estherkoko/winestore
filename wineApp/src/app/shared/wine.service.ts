@@ -5,12 +5,15 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
 import { Wine } from './wine.model';
+//import { Options } from '../../../node_modules/@types/selenium-webdriver/ie';
 
 @Injectable()
 export class WineService {
 //create two variables in the service class
   //selectedWine of type wine class
-  selectedWine: Wine;
+  //selectedWine: Wine;
+  selectedWine: any = {};
+
   //array of wines as wines
   wines: Wine[];
 
@@ -24,4 +27,12 @@ export class WineService {
       return this.http.post(this.baseURL, myWine)
   }
 
+  //function to get data from db
+  getWineList(){
+    return this.http.get(this.baseURL);
+   // console.log('hewll'+ this.http.get(this.baseURL));
+    //.map((response:Response)=>response.json());
+   // return this.http.get(${this.baseURL});
+   // console.log(this.http.get(this.baseURL));
+  }
 }

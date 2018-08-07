@@ -14,8 +14,7 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
-    
+    HttpClientModule
     
   ],
   providers: [],

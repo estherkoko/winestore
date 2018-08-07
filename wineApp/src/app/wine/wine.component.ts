@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import  { HttpClient } from  '@angular/common/http';
 import { WineService } from '../shared/wine.service';
 import { NgForm } from '../../../node_modules/@angular/forms';
+import { Wine } from '../shared/wine.model';
 //import { toast } from '../../../../../../../node_modules/angular2-materialize';
 
 declare var M: any;
@@ -11,11 +13,16 @@ declare var M: any;
   providers :[WineService]
 })
 export class WineComponent implements OnInit {
-
+  newwines: any;
+  allwines :{};
   //add constructor parameter
-  constructor(private wineService: WineService) {}
+  constructor(private wineService: WineService, private http: HttpClient ) {}
 
   ngOnInit() {
+    this.http.get('http://localhost:3000/wine').subscribe(data => {
+      this.newwines = data;
+        });
+    this.refreshWineList();
     this.resetForm();
   }
 
@@ -45,6 +52,13 @@ export class WineComponent implements OnInit {
     this.resetForm(form);
     M.toast({html : 'Saved successfully', classes:'rounded'});
   });
+}
+
+//add array collection to the response
+refreshWineList(){
+  this.wineService.getWineList().subscribe((res)=>{
+    this.wineService.wines=res as Wine[];
+});
 }
   }
 
