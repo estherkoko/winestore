@@ -75,6 +75,18 @@ refreshWineList(){
 onEdit(w: Wine){
   this.wineService.selectedWine=w;
 }
+//function that returns an observer 
+onDelete(_id: string, form: NgForm){
+  if(confirm('Are you sure you want to delete this wine?')==true){
+    this.wineService.deleteWine(_id).subscribe((res) =>
+    {
+      this.refreshWineList();
+      this.resetForm(form);
+      M.toast({html : 'Deleted successfully', classes:'rounded'});
+    });
   }
+}
+
+}
 
 

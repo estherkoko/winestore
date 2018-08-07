@@ -35,7 +35,14 @@ export class WineService {
    // return this.http.get(${this.baseURL});
    // console.log(this.http.get(this.baseURL));
   }
+  //function to update db based on id
   putWine(myWine:Wine){
     return this.http.put(this.baseURL + `/${myWine._id}`, myWine);
   }
+
+  //delete from db using id - using delete route usage
+ deleteWine(_id:string){
+    return this.http.delete(this.baseURL + `/${_id}`);
+  }
+
 }
