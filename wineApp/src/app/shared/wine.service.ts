@@ -35,4 +35,7 @@ export class WineService {
    // return this.http.get(${this.baseURL});
    // console.log(this.http.get(this.baseURL));
   }
+  putWine(myWine:Wine){
+    return this.http.put(this.baseURL + `/${myWine._id}`, myWine);
+  }
 }

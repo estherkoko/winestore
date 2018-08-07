@@ -13,15 +13,14 @@ declare var M: any;
   providers :[WineService]
 })
 export class WineComponent implements OnInit {
-  newwines: any;
-  allwines :{};
+  //newwines: any;
   //add constructor parameter
   constructor(private wineService: WineService, private http: HttpClient ) {}
 
   ngOnInit() {
-    this.http.get('http://localhost:3000/wine').subscribe(data => {
+    /*this.http.get('http://localhost:3000/wine').subscribe(data => {
       this.newwines = data;
-        });
+        });*/
     this.refreshWineList();
     this.resetForm();
   }
@@ -48,10 +47,21 @@ export class WineComponent implements OnInit {
     }
  //submit form to enter data into the database
  onSubmit(form:NgForm){
+   if(form.value._id==""){
   this.wineService.postWine(form.value).subscribe((res)=>{
     this.resetForm(form);
+    this.refreshWineList();
     M.toast({html : 'Saved successfully', classes:'rounded'});
   });
+}
+//update the data for the current id
+else{
+  this.wineService.putWine(form.value).subscribe((res)=>{
+    this.resetForm(form);
+    this.refreshWineList();
+    M.toast({html : 'Updated successfully', classes:'rounded'});
+  });
+}
 }
 
 //add array collection to the response
@@ -59,6 +69,11 @@ refreshWineList(){
   this.wineService.getWineList().subscribe((res)=>{
     this.wineService.wines=res as Wine[];
 });
+}
+
+//function to allow edit of data and update the db
+onEdit(w: Wine){
+  this.wineService.selectedWine=w;
 }
   }
 
