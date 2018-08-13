@@ -1,0 +1,13 @@
+
+div{ max-width: 1120px; margin: 0 auto; }
+.new {
+   border-style: dashed;
+   padding: 30px;
+   margin-bottom: 30px;
+   border-color:#c7c9cb;
+
+    height: 360px}
+.column__button {}
+.tealborder{border:#3BA4AB solid 1px!important;}
+.textbox--padding {padding:20px;}
+.noshadow:focus {box-shadow: none!important;} 

@@ -1,0 +1,28 @@
+.nav-wrapper { max-width: 1120px; margin: 0 auto; }
+.maincontainer {background-color: #f0f4f5; color: #405052;}
+nav{background: white}
+nav a {
+	/*flex: 1 0 auto;*/
+	/*font-family: Arial #405052;*/
+	font-size: 1rem;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0px auto;
+	/*border-left: 2px red;*/
+	color: #405052;
+	margin: 0 0.3rem;
+}
+nav.nav-center ul {
+    text-align: center;
+}
+nav.nav-center ul li {
+    display: inline;
+    float: none;
+}
+nav.nav-center ul li a {
+    display: inline-block;
+}
+
+i.icon-teal {
+    color: #3BA4AB;
+}

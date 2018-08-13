@@ -14,6 +14,10 @@ declare var M: any;
 })
 export class WineComponent implements OnInit {
   //newwines: any;
+  errorMessage: String;
+  dataAvailableById= true;
+  dataAvailableAfterFilter= true;
+  filteredListOfWines: Wine[];
   //add constructor parameter
   constructor(private wineService: WineService, private http: HttpClient ) {}
 
@@ -86,6 +90,7 @@ onDelete(_id: string, form: NgForm){
     });
   }
 }
+
 
 }
 
