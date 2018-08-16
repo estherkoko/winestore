@@ -1,19 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
     <!-- Navbar goes here -->
-    <header>
-      <nav class="nav-center" role="navigation">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">55Wines</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Wines<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a href=""><i class="large material-icons icon-teal">add_alert</i></a></li>
-            <li><a href=""> <i class="large material-icons">account_circle</i></a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-  
-        <app-wine class="maincontainer"></app-wine>     
+<div class="apphead">
+    <div class="row border-bottom">
+      <div class="col m2 border-right">
+        <div class="pad bold-700">55Wines</div>
+      </div>
+      <div class="col m10">
+          <div class="">
+              <div class="col m6">
+                  <div class="pad">Premium Wines from 55</div>
+              </div>
+              <div class="col m6">
+                <div class="pad-10 right-align">
+                    <button class="btn waves-effect waves-light blue darken-4" type="submit" name="action">New Wine
+                        <i class="material-icons right">add</i>
+                    </button>
+                  </div>  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+    <div class="maincontainer">
+        <app-wine></app-wine>  
+    </div>
+           
     
 
 

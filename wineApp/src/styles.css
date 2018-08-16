@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=poppins:400,700,900');
+html {font-family: 'Poppins', sans-serif!important;}
+.maincontainer {margin-top: -20px; }
+.border-bottom {border-bottom: #ccc solid 1px; }
+.border-right {border-right: #ccc solid 1px;}
+.pad {padding:20px;}
+.pad-10 {padding: 10px;}
+.bold-700 {font-weight: 700}
+.bold-900 {font-weight: 900}
