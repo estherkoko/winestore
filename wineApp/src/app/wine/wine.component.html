@@ -76,7 +76,7 @@
                       <th></th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let w of wineService.wines | paginate: {itemsPerPage: 5, currentPage: p}" >
+                  <tr *ngFor="let w of wineService.wines | paginate: {itemsPerPage: 5, currentPage: p}">
                     <td>{{w.name}}</td>
                     <td>{{w.description}}</td>
                     <td>{{w.typeOfWine}}</td>
@@ -95,7 +95,8 @@
                   </tr>
 
                 </table>
-                <pagination-controls (pageChange)= "p = $event"></pagination-controls>
+                <pagination-controls (pageChange)= "p = $event" class="pagination"></pagination-controls>
+                
       </div>
       </div>
             
