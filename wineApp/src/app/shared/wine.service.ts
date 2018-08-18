@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
+//import {NgxPaginationModule} from 'ngx-pagination';
+
 
 import { Wine } from './wine.model';
 //import { Options } from '../../../node_modules/@types/selenium-webdriver/ie';

@@ -14,10 +14,7 @@ declare var M: any;
 })
 export class WineComponent implements OnInit {
   //newwines: any;
-  errorMessage: String;
-  dataAvailableById= true;
-  dataAvailableAfterFilter= true;
-  filteredListOfWines: Wine[];
+ myPage:number = 1;
   //add constructor parameter
   constructor(private wineService: WineService, private http: HttpClient ) {}
 

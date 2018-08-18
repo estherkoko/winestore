@@ -76,40 +76,26 @@
                       <th></th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let w of wineService.wines" >
+                  <tr *ngFor="let w of wineService.wines | paginate: {itemsPerPage: 5, currentPage: p}" >
                     <td>{{w.name}}</td>
                     <td>{{w.description}}</td>
-                    <td><div>{{w.typeOfWine}}</div></td>
+                    <td>{{w.typeOfWine}}</td>
                     <td>{{w.size}}</td>
-                    <td>{{w.price}}</td>
+                    <td>{{w.price | currency:'USD' }}</td>
                     <td> 
-                        <a class="action-btn table-icons" (click)="onEdit(w) ">
+                        <a class="action-btn table-icons modal-trigger" href="#modal1" (click)="onEdit(w) ">
                             <i class="material-icons">edit</i>
                         </a>
 
                         <a class="action-btn threedot" (click)="onEdit(w)">
                             <i class="material-icons">more_horiz</i>
                         </a>
-                   
                   </td>
+
                   </tr>
+
                 </table>
-            </div> 
-
-
-
-          </div>
-          
-            <div class="">
-                <h1>Wine Drawer</h1>
-                <div class="row">
-                  <div class="col-md-6">
-                    
-                  </div>
-                </div>
-    
-            
-        </div>
+                <pagination-controls (pageChange)= "p = $event"></pagination-controls>
       </div>
       </div>
             
