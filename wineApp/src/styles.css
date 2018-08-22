@@ -9,6 +9,4 @@ html {font-family: 'Poppins', sans-serif!important;}
 .bold-700 {font-weight: 700}
 .bold-900 {font-weight: 900}
 .navicons{font-size:20px!important}
-pagination-controls .ngx-pagination li.current {
-    background: #333367!important;
-  }
+pagination-controls .ngx-pagination li.current {background: #333367!important;}

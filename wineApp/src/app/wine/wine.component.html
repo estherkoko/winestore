@@ -51,7 +51,7 @@
           <div class="app__topinfo pad-10 border-bottom white searchmargin">
         
             <div class="left col m4">
-              <input class= "material-icons medium prefix  left-align" placeholder="search">
+              <input class= "left-align " style="color:black" [(ngModel)]="searchText" placeholder="search">
             </div>
             <div class="col m6 right">
               <div class="pad-10 right-align">
@@ -76,7 +76,7 @@
                       <th></th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let w of wineService.wines | paginate: {itemsPerPage: 5, currentPage: p}">
+                  <tr *ngFor="let w of wineService.wines | paginate: {itemsPerPage: 5, currentPage: p} | filter: {name :searchText}">
                     <td>{{w.name}}</td>
                     <td>{{w.description}}</td>
                     <td>{{w.typeOfWine}}</td>

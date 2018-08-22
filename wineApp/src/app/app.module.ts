@@ -6,21 +6,21 @@ import { WineComponent } from './wine/wine.component';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 //import { Ng2PaginationModule } from 'ng2-pagination';
 import {NgxPaginationModule} from 'ngx-pagination';
-
-//import { FilterPipe} from './filter.pipe';
+import { FilterPipe} from './filter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WineComponent,
+    FilterPipe
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-   NgxPaginationModule,
+    NgxPaginationModule,
     //Ng2PaginationModule
     
   ],
