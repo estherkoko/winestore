@@ -13,7 +13,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(cors({origin: 'http://localhost:4200'}));
 //start the express server
-app.listen(3000, () => console.log('Server started at port : 3000'));
+app.listen(process.env.PORT || 8080, () => console.log('Server started at port : 3000'));
 
 //call middleware function to use controller
 app.use('/wine', wineController);

@@ -20,7 +20,7 @@ export class WineService {
   wines: Wine[];
 
   //initialized uri for the wine controller 
-  readonly baseURL = 'http://localhost:3000/wine';
+  readonly baseURL = 'wine';
   //inject HTTP client inside the constructor
   constructor(private http :HttpClient) { }
 
