@@ -1,9 +1,14 @@
     <!-- Page Layout here -->
   <div>
     <div class="row ">
-        <div class="col m2 border-right"> 
-          <div class="pad viewheight">
-
+      <div class="col m2 border-right leftdiv"> 
+        <div class="pad ">
+            <div>  <i class = "material-icons leftdivicons navicons">account_circle</i> Account</div><br>
+            <div>  <i class = "material-icons leftdivicons navicons">local_shipping</i> Vendors</div><br>
+            <div>  <i class = "material-icons leftdivicons navicons">mail</i> Mailbox</div><br>
+            <div>  <i class = "material-icons leftdivicons navicons">track_changes</i> Audit</div><br>
+            <div>  <i class = "material-icons leftdivicons navicons">report_problem</i> Urgent Attention</div><br>
+         
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
@@ -44,23 +49,18 @@
         </div>
         <div class="col m10 maindivbackground"> 
           <div class="app__topinfo pad-10 border-bottom white searchmargin">
-            <div class="col m2">
-              <select class="browser-default dropdown ">
-                  <option value="1">All Wines</option>
-                  <option value="2">Ciroc</option>
-                  <option value="3">Pinot Grigio</option>
-                </select>  
+        
+            <div class="left col m4">
+              <input class= "material-icons medium prefix  left-align" placeholder="search">
             </div>
-            <div class="col m2">
-                <select class="browser-default dropdown ">
-                  <option value="1">Wine Types</option>
-                  <option value="2">Ciroc</option>
-                  <option value="3">Pinot Grigio</option>
-                </select>
+            <div class="col m6 right">
+              <div class="pad-10 right-align">
+                  <a class=" clear btn #333367 modal-trigger" href="#modal1">New Wine
+                      <i class="material-icons right">add</i>
+                  </a>
+                </div>  
             </div>
-            <div class="right col m2">
-              <input class= "material-icons medium prefix  right-align" placeholder="search">
-            </div>
+          
           </div>
           <br>
           <div class="app__main pad white maincontent">

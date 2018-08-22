@@ -1,8 +1,9 @@
-.viewheight {height: 100vh}
+.leftdiv {height: 100vh; background-color:#000040;color:#fff;}
+.leftdivicons{vertical-align: bottom}
 .maindivbackground{background-color: #f3f4f6;}
 .searchmargin{margin:0 -10px;height: 75px;}
-.dropdown{font-weight: bold}
 .table-icons{color:#0D47A1}
 .threedot{color:#0288d1 }
 .maincontent{margin:0 12px; height: 100vh;}
+a{background-color:#333367}
 /*.pagination{ background:#0D47A1!important}*/
