@@ -3,6 +3,8 @@ import  { HttpClient } from  '@angular/common/http';
 import { WineService } from '../shared/wine.service';
 import { NgForm } from '../../../node_modules/@angular/forms';
 import { Wine } from '../shared/wine.model';
+import { FilterPipe} from '../filter.pipe';
+
 //import { toast } from '../../../../../../../node_modules/angular2-materialize';
 
 declare var M: any;
@@ -14,9 +16,10 @@ declare var M: any;
 })
 export class WineComponent implements OnInit {
   //newwines: any;
- myPage:number = 1;
+ p:number = 1;
+ searchText :any;
   //add constructor parameter
-  constructor(private wineService: WineService, private http: HttpClient ) {}
+  constructor(public wineService: WineService, private http: HttpClient ) {}
 
   ngOnInit() {
     /*this.http.get('http://localhost:3000/wine').subscribe(data => {
