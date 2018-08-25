@@ -22,7 +22,7 @@ export class WineService {
   //initialized uri for the wine controller 
   readonly baseURL = 'https://winesfiftyfive.herokuapp.com/wine';
   //inject HTTP client inside the constructor
-  constructor(private http :HttpClient) { }
+  constructor(public http :HttpClient) { }
 
   //post request for http client object
   postWine(myWine : Wine){
